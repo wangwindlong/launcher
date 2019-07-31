@@ -3,9 +3,11 @@ package com.benny.openlauncher.widget;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Color;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.CardView;
+
+import androidx.cardview.widget.CardView;
+import androidx.viewpager.widget.PagerAdapter;
+
+import androidx.viewpager.widget.ViewPager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;

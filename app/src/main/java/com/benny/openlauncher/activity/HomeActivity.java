@@ -14,10 +14,11 @@ import android.graphics.Point;
 import android.net.Uri;
 import android.os.Build.VERSION;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
+
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;

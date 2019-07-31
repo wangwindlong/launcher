@@ -3,8 +3,9 @@ package com.benny.openlauncher.activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.Toolbar;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.benny.openlauncher.R;
 import com.benny.openlauncher.fragment.SettingsMasterFragment;

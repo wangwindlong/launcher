@@ -26,6 +26,10 @@ android {
         versionName "0.6.1"
     }
 
+    dexOptions {
+        javaMaxHeapSize "8g"
+    }
+
     productFlavors {
         flavorDefault {
         }
@@ -91,14 +95,15 @@ android {
 
 dependencies {
     // Support libraries
-    implementation "com.android.support:recyclerview-v7:${version_library_appcompat}"
-    implementation "com.android.support:appcompat-v7:${version_library_appcompat}"
-    implementation "com.android.support:cardview-v7:${version_library_appcompat}"
-    implementation "com.android.support:design:${version_library_appcompat}"
-    implementation "com.android.support:support-v13:${version_library_appcompat}"
-    implementation "com.android.support:preference-v7:${version_library_appcompat}"
-    implementation "com.android.support:preference-v14:${version_library_appcompat}"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation "androidx.recyclerview:recyclerview:${version_library_appcompatx}"
+    implementation "androidx.appcompat:appcompat:1.0.2"
+    implementation "androidx.cardview:cardview:${version_library_appcompatx}"
+    implementation "com.google.android.material:material:${version_library_appcompatx}"
+    implementation "androidx.legacy:legacy-support-v13:${version_library_appcompatx}"
+    implementation "androidx.preference:preference:${version_library_appcompatx}"
+    implementation "androidx.legacy:legacy-preference-v14:${version_library_appcompatx}"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
 
     // UI Libs
     implementation 'com.mikepenz:fastadapter:3.2.3@aar'
@@ -106,7 +111,9 @@ dependencies {
     implementation 'com.mikepenz:fastadapter-extensions:3.0.0@aar'
     implementation 'jp.wasabeef:recyclerview-animators:2.2.7'
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
-    implementation 'agency.tango.android:material-intro-screen:0.0.5'
+//    implementation 'agency.tango.android:material-intro-screen:0.0.5'
+    implementation 'io.github.dreierf:material-intro-screen:0.0.6'
+
     implementation 'cat.ereza:customactivityoncrash:2.2.0'
     implementation 'de.psdev.licensesdialog:licensesdialog:1.8.3'
     implementation 'in.championswimmer:SimpleFingerGestures_Android_Library:1.2'
@@ -116,9 +123,7 @@ dependencies {
         transitive = true
     }
 
-    implementation('com.github.turing-tech:MaterialScrollBar:13.3.0') {
-        exclude group: 'com.android.support'
-    }
+    implementation('com.github.turing-tech:MaterialScrollBar:13.+')
 
     // Tools
     implementation "com.jakewharton:butterknife:${version_library_butterknife}"
